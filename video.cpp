@@ -25,13 +25,18 @@ bool video::better(video* other) //function used to check the rating of one vide
 {
     return m_rating > other->m_rating;
 }
+string video::titleOut()
+{
+    return m_title;
+}
 
 
 
 
 void video::print() //print function
 {
-    cout << m_title << ", " << m_url << ", " << m_comment << ", " << m_length << ", "; // outputs the video information in the proper format
+    cout << m_title << ", " << m_url << ", " << m_comment << ", " << m_length << ", "; // outputs the video information
+in the proper format
     for (int i = 0;i < m_rating; i++) //for loop used to output the rating as *s
     {
         cout << '*';
