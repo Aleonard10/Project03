@@ -9,6 +9,8 @@ class vlist
         ~vlist();
         void insert(video* value); // insert at beginning of list
         void print();
+    void remove(string title);
+        bool compare(string title);
         int sum();
         void insert_at_end(video* value);
     private:
