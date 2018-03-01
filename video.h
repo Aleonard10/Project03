@@ -9,6 +9,7 @@ class video
       bool longer(video* p); //prototype function for testing difference in length between 2 videos
       bool alphabetical(video* p); //prototype function for testing difference in alphabetical order between 2 videos
       bool better(video* p); //prototype function for testing difference in rating between 2 videos
+      string titleOut();
     private:
       string m_title; //member variable for title
       string m_url; //member variable for url
