@@ -74,3 +74,38 @@ void vlist::insert_at_end(video* value)
 
 
 }
+void vlist::remove(string title) //rename to remove
+{
+    Node *ptr = m_head;
+    while (ptr->m_next != NULL)
+    {
+        if (title == ptr->m_next->m_value->titleOut())
+        {
+            Node *temp;
+            temp = ptr->m_next;
+            ptr = ptr->m_next->m_next;
+            delete temp;
+
+        }
+        else
+        {
+            ptr = ptr->m_next;
+        }
+    }
+}
+bool vlist::compare(string title)
+{
+    Node *ptr = m_head;
+    while (ptr != NULL)
+    {
+        if (title == ptr->m_value->titleOut())
+        {
+            return 1;
+        }
+        else
+        {
+            ptr = ptr->m_next;
+        }
+    }
+    return 0;
+}
